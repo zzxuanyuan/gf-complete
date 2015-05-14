@@ -1193,6 +1193,7 @@ int gf_w8_table_init(gf_t *gf)
           break;
         case 3:
           dd->multtable[a][b] = prod;
+//          printf("multtable[%u][%u]=%u",a,b,dd->multtable[a][b]);
           dd->divtable[prod][b] = a;
           if ((b & 0xf) == b) { dd->low[a][b] = prod; }
           if ((b & 0xf0) == b) { dd->high[a][b>>4] = prod; }

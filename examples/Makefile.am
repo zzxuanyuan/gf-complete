@@ -4,7 +4,7 @@ AM_CPPFLAGS = -I$(top_builddir)/include -I$(top_srcdir)/include
 AM_CFLAGS = -O3 $(SIMD_FLAGS) -fPIC
 
 bin_PROGRAMS = gf_example_1 gf_example_2 gf_example_3 gf_example_4 \
-               gf_example_5 gf_example_6 gf_example_7
+               gf_example_5 gf_example_6 gf_example_7 gf_myexample
 
 gf_example_1_SOURCES = gf_example_1.c
 #gf_example_1_LDFLAGS = -lgf_complete
@@ -34,4 +34,6 @@ gf_example_7_SOURCES = gf_example_7.c
 #gf_example_7_LDFLAGS = -lgf_complete
 gf_example_7_LDADD = ../src/libgf_complete.la
 
-
+gf_myexample_SOURCES = gf_myexample.c
+#gf_myexample_LDFLAGS = -lgf_complete
+gf_myexample_LDADD = ../src/libgf_complete.la

@@ -22,6 +22,10 @@ AM_MAINTAINER_MODE([disable])
 dnl Compiling with per-target flags requires AM_PROG_CC_C_O.
 AC_PROG_CC
 
+AC_PROG_CXX
+AX_CHECK_COMPILE_FLAG([-std=c++11], [
+                        CXXFLAGS="$CXXFLAGS -pthread -std=c++11"])
+
 # Check for functions to provide aligned memory
 #
 AC_CHECK_FUNCS([posix_memalign],
