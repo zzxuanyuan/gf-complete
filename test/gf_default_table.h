@@ -10,6 +10,7 @@
 
 #include "gf_complete.h"
 #include "gf_rand.h"
+#include "getcputime.h"
 
 #ifndef B4M
 #define B4M	4194304
@@ -22,9 +23,11 @@
 extern "C" {
 #endif
 
-int gf_default_table(void);
-int gf_split_table(void);
-int gf_composite(void);
+void *gf_default_table(void *arg);
+
+void *gf_split_table(void *arg);
+
+void *gf_composite(void *arg);
 
 #ifdef __cplusplus
 }

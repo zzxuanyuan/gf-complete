@@ -37,3 +37,4 @@ gf_example_7_LDADD = ../src/libgf_complete.la
 gf_myexample_SOURCES = gf_myexample.c
 #gf_myexample_LDFLAGS = -lgf_complete
 gf_myexample_LDADD = ../src/libgf_complete.la
+gf_myexample_LDFLAGS = -lrt

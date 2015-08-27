@@ -1,16 +1,6 @@
-#include <stdio.h>
-#include <getopt.h>
-#include <stdint.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-
-#include "gf_complete.h"
-#include "gf_rand.h"
 #include "gf_default_table.h"
-#include "getcputime.h"
 
-int gf_default_table(void)
+void *gf_default_table(void *arg)
 {
   printf("run gf_default_table()\n");
   uint32_t a, b, c;
@@ -59,10 +49,10 @@ int gf_default_table(void)
     printf("Time takes: %f (ms)\n", endTime-startTime);
   }
 
-  exit(0);
+  return NULL;
 }
 
-int gf_split_table(void)
+void *gf_split_table(void *arg)
 {
   printf("run gf_split_table()\n");
   uint32_t a, b, c;
@@ -112,10 +102,10 @@ int gf_split_table(void)
     printf("Time takes: %f (ms)\n", endTime-startTime);
   }
 
-  exit(0);
+  return NULL;
 }
 
-int gf_composite(void)
+void *gf_composite(void *arg)
 {
   printf("run gf_composite()\n");
   uint32_t a, b, c;
@@ -172,5 +162,5 @@ int gf_composite(void)
     printf("Time takes: %f (ms)\n", endTime-startTime);
   }
 
-  exit(0);
+  return NULL;
 }
